@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { UsersService } from '../../../model/service/users.service';
+import { IUserData } from '../../../model/interfaces/iuser.interface';
 
 @Component({
   selector: 'app-user-list',
@@ -7,5 +9,15 @@ import { Component } from '@angular/core';
   styleUrl: './user-list.component.css'
 })
 export class UserListComponent {
+
+  userService = inject(UsersService)
+  usersData: IUserData[] = []
+
+  ngOnInit() {
+    this.userService.getAllUsers().subscribe( (data) => {
+      this.usersData = data
+      console.log(this.usersData)
+    })
+  }
 
 }
