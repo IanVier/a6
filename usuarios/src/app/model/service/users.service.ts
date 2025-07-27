@@ -22,7 +22,11 @@ export class UsersService {
     getAllUsers(): Observable<IUserData[]> { // <--- ¡Cambia el tipo de retorno aquí!
     return this.httpClient.get<IUser>(this.baseUrl).pipe( // <--- Espera la interfaz IUser (la respuesta completa)
       map(response => response.results) 
-    );
+    )
   }
+
+getById(id: string): Observable<IUserData> {
+  return this.httpClient.get<IUserData>(`${this.baseUrl}/${id}`);
+}
 
 }
