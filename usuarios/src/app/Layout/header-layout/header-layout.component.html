@@ -1,1 +1,9 @@
-<p>header-layout works!</p>
+<div class="header">
+    <div class="img">
+        <a  [routerLink]="['/inicio']" ><img src="logo/logo.png" alt=""></a>
+    </div>
+    <nav class="nav">
+        <a [routerLink]="['/inicio']" routerLinkActive="activo" >Inicio</a>
+        <a [routerLink]="['/form']" routerLinkActive="activo"  >Nuevo Usuario</a>
+    </nav>
+</div>

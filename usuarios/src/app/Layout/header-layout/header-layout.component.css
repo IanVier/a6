@@ -1,0 +1,27 @@
+ 
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-heigth);
+ 
+    padding: 0 16px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    font-size: 1.5rem;
+} 
+.img img {
+
+  height: calc(var(--header-heigth) - 8px);
+  width: auto;           
+  object-fit: cover;     
+  display: block;        
+} 
+.activo {
+    color: blue;
+}  
