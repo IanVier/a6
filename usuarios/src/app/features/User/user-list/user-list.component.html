@@ -3,7 +3,7 @@
 <ul>
     @for (user of usersData; track user.id) {
         <li>
-            {{user.first_name}}
+           <a href="#" [routerLink]="['/user', user._id]" > {{user.id}} {{user.first_name}} </a>
         </li>
     }
 </ul>
