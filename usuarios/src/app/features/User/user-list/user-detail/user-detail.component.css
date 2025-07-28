@@ -1,0 +1,16 @@
+.card{
+    margin: 0 auto;
+}
+
+.text__title{
+    font-weight: 700;
+}
+
+.btn-wrap {
+    display: flex;
+    flex-direction: row; 
+    gap: 8px;
+    justify-content: space-around;
+    margin: 8px;
+
+}

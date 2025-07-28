@@ -3,7 +3,9 @@
 <ul>
     @for (user of usersData; track user.id) {
         <li>
-           <a href="#" [routerLink]="['/user', user._id]" > {{user.id}} {{user.first_name}} </a>
+            <!-- usersData al input, pero el componente espera un solo usuario (IUserData). -->
+            <app-user-card [userDetail]="user"></app-user-card>
+            <!-- <a href="#" [routerLink]="['/user', user._id]" > {{user.id}} {{user.first_name}} </a> -->
         </li>
     }
 </ul>

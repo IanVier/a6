@@ -1,0 +1,14 @@
+<div class="card" style="width: 32rem;">
+  <img [src]="userDetail?.image" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title"> {{userDetail?.first_name}} </h4>
+    <h4 class="card-title"> {{userDetail?.last_name}} </h4>
+    <div class="btn-wrap">
+        <a href="#" [routerLink]="['/user', userDetail?._id]" class="btn btn-primary">Ver detalle</a>
+        <a href="#" class="btn btn-primary">Actualizar</a>
+        <a href="#" class="btn btn-primary">Borrar</a>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
