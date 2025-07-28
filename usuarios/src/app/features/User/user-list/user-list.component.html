@@ -1,6 +1,7 @@
 
 <h1>Lista de usuarios</h1>
-<ul  class="user__grid">
+<div class="container">
+    <ul  class="user__grid">
     @for (user of usersData; track user.id) {
         <li>
             <!-- usersData al input, pero el componente espera un solo usuario (IUserData). -->
@@ -9,3 +10,4 @@
         </li>
     }
 </ul>
+</div>

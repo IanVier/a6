@@ -1,9 +1,17 @@
-.user__grid{
+.user__grid {
     width: 100%;
     margin: 16px;
     display: grid;
     gap: 24px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
 
 
+@media (max-width: 600px){
+    .user__grid {
+        display: flex;
+        flex-direction: column;
+        max-width: 80%;
+        margin: 8px auto;
+    }
 }

@@ -1,5 +1,5 @@
 <div class="card">
-  <img [src]="userDetail?.image" class="card-img-top" alt="Imagen de perfil">
+  <img [src]="userDetail?.image" [routerLink]="['/user', userDetail?._id]" class="card-img-top" alt="Imagen de perfil">
   <div class="card-body">
     <h4 class="card-title"> {{userDetail?.first_name}} {{userDetail?.last_name}} </h4>
     <div class="btn-wrap">
