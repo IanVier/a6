@@ -1,0 +1,8 @@
+.user__grid{
+    width: 100%;
+    margin: 16px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+}
