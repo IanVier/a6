@@ -31,7 +31,10 @@ export class UserFormComponent {
   }
 
 onSubmit(){
-  console.log(this.userForm.value)
+  console.log(
+    this.userForm.value,
+    this.userForm.valid
+  )
 }
 
 }
