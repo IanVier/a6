@@ -3,6 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { ActivatedRoute } from '@angular/router';
 import { UsersService } from '../../../model/service/users.service';
 import { IUserData } from '../../../model/interfaces/iuser.interface';
+import { passwordValidator } from './passwordValidator';
 
 @Component({
   selector: 'app-user-form',
@@ -32,6 +33,13 @@ export class UserFormComponent {
       ]),
       image: new FormControl("",[
         Validators.required
+      ]),
+      username: new FormControl("",[
+        Validators.required
+      ]),
+      password: new FormControl("",[
+        Validators.required,
+        passwordValidator
       ]),
       _id: new FormControl('')
       }, [])
@@ -75,6 +83,9 @@ ngOnInit() : void {
     }
   })
 }
+  checkControl(controlName: string, errorName: string): boolean | undefined {
+    return this.userForm.get(controlName)?.hasError(errorName) && this.userForm.get(controlName)?.touched
+  }
 
 }
 

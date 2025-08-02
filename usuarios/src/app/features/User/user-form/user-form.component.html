@@ -6,20 +6,46 @@
     <div>
         <label class="form-label" for="first_name">Nombre</label>
         <input class="form-control" type="text" id="first_name"  formControlName="first_name">
+        @if(checkControl('first_name','required')){
+            <p class="error">El campo nombre es obligatorio.</p>
+        }
     </div>
     <div>
         <label class="form-label" for="last_name">Apellido</label>
         <input class="form-control" type="text" id="last_name" formControlName="last_name">
+        @if(checkControl('last_name','required')){
+            <p class="error">El campo apellido es obligatorio.</p>
+        }
     </div>
     <div>
         <label class="form-label" for="email">Email</label>
         <input class="form-control" type="text" id="email" formControlName="email">
+        @if(checkControl('email','required')){
+            <p class="error">El campo email es obligatorio.</p>
+        }
     </div>
     <div>
         <label class="form-label" for="image">Imagen</label>
         <input class="form-control" type="text" id="image" formControlName="image">
+        @if(checkControl('email','required')){
+        <p class="error">El campo imagen es obligatorio.</p>
+        }
     </div>
-    <p>Form Status: {{ userForm.status }}</p>
+    <div>
+        <label class="form-label" for="username">Alias</label>
+        <input class="form-control" type="text" id="username" formControlName="username">
+        @if(checkControl('username','passwordValidator')){
+        <p class="error">El campo alias es obligatorio.</p>
+        }
+    </div>
+    <div>
+        <label class="form-label" for="password">Contraseña</label>
+        <input class="form-control" type="text" id="password" formControlName="password">
+        @if(checkControl('password','required')){
+        <p class="error">El campo contraseña es obligatorio.</p>
+        }
+    </div>
+
     <input type="submit"  [disabled]="!userForm.valid" value="Guardar" class="btn btn-success mt-2">
 
 </form>
