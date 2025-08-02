@@ -33,13 +33,8 @@ export class UsersService {
     return this.httpClient.put<IUserData>(`${this.baseUrl}/${id}`, user);
   }
 
+  deleteUser(id: string): Observable<any> {
+    return this.httpClient.delete(`${this.baseUrl}/${id}`)
+  }
+
 }
-
-
-
-
-
-
-  // getAllUsers(): Observable<IUser[]> {
-  //   return this.httpClient.get<IUser[]>(this.baseUrl)
-  // }
