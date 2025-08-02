@@ -19,6 +19,6 @@
         <label class="form-label" for="image">Imagen</label>
         <input class="form-control" type="text" id="image" formControlName="image">
     </div>
-    <input type="submit" value="Guardar" class="btn btn-success mt-2">
+    <input type="submit"  [disabled]="!userForm.valid" value="Guardar" class="btn btn-success mt-2">
 
 </form>

@@ -12,6 +12,7 @@ export class UserFormComponent {
   userForm: FormGroup;
 
   constructor() {
+
     this.userForm = new FormGroup({
       first_name: new FormControl("",[
         Validators.required,
@@ -26,7 +27,7 @@ export class UserFormComponent {
       image: new FormControl("",[
         Validators.required
       ])
-    }, [])
+      }, [])
 
   }
 
