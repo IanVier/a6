@@ -17,8 +17,15 @@ export class UserDetailComponent {
   userDetail?: IUserData
 
   private dialog = inject(Dialog) 
+
   protected openModal() {
-    this.dialog.open(UserDeleteComponent)
+    this.dialog.open(UserDeleteComponent, {
+      data: {
+        firstName: this.userDetail?.first_name,
+        lastName: this.userDetail?.last_name,
+        userId: this.userDetail?._id
+      }
+    });
   }
 
   ngOnInit() {

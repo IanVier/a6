@@ -1,7 +1,18 @@
 .card-body {
-    min-width: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
-.btn {
-    margin: 12px 4px ;
+.card-title{
+    border-bottom: 1px solid rgb(204, 204, 204);
+    padding: 8px;
+    margin-bottom: 8px;
+}
+.btn__wrap{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+    justify-content: end;
+
 }

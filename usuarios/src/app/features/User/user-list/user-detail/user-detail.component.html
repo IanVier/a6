@@ -13,9 +13,9 @@
     <p class="card-text"> <span class="text__title">Nº Id: </span>{{userDetail?.id}} </p>
     <p class="card-text"> <span class="text__title">Id: </span>{{userDetail?._id}} </p>
     <div class="btn-wrap">
-        <a (click)="openModal()" class="btn btn-primary">Eliminar</a>
-        <a [routerLink]="['/user/edit',userDetail?._id]" class="btn btn-primary">Actualizar</a>
-        <a href="#" [routerLink]="['/home']" class="btn btn-primary">Volver a listado</a>
+        <a (click)="openModal()" class="btn btn-danger btn-lg">Eliminar</a>
+        <a [routerLink]="['/user/edit',userDetail?._id]" class="btn btn-primary btn-lg">Actualizar</a>
+        <a href="#" [routerLink]="['/home']" class="btn btn-secondary btn-lg">Volver a listado</a>
     </div>
   </div>
 </div>
