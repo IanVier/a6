@@ -21,8 +21,8 @@ closeModal(): void {
 deleteUser() {
   const userId = this.userData.userId
   this.userService.deleteUser(userId).subscribe( {
-          next: () => {
-      console.log(`Usuario con ID ${userId} eliminado.`);
+          next: (response) => {
+      console.log(`Usuario con ID ${userId} eliminado.`, response);
       this.closeModal()
       this.router.navigate(['/home']);
       },
