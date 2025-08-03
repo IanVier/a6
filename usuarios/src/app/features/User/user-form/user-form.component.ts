@@ -17,6 +17,7 @@ export class UserFormComponent {
   userId: string | null = null
   private activateRoute = inject(ActivatedRoute)
   private userService = inject(UsersService)
+  public formTitle: string = ''
 
   constructor() {
 
@@ -59,6 +60,7 @@ export class UserFormComponent {
               console.error('Error al actualizar el usuario:', error);
             }
           })
+
       } else {
         this.userService.createUser(userData).subscribe( {
           next: (response) => {
@@ -77,9 +79,12 @@ ngOnInit() : void {
   this.activateRoute.params.subscribe(params => {
     this.userId = params['id'] || null
     if (this.userId) {
+      this.formTitle = 'Editar usuario'
       this.userService.getById(this.userId).subscribe(user => {
         this.userForm.patchValue(user)
       })
+    } else if (!this.userId) {
+      this.formTitle = 'Crear nuevo usuario'
     }
   })
 }
